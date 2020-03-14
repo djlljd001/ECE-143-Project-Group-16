@@ -60,3 +60,4 @@ Root
 1. Run the ```main.py``` to generate all the data from raw txt files in ```school_data``` and ```student_data```  
 2. Run the ```Plot_Extent_of_overlap.py```, ```Plot_radar_chart.py```, ```Plot_ucsd_ece.py``` etc. to get the graphs.
 3. Open Analysis.ipynb and run each function for corresponding plots.
+
