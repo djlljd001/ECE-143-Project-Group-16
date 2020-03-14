@@ -57,7 +57,7 @@ Root
 
 ### Run the code
 
-1. Run the ```main.py``` to generate all the data from raw txt files in ```school_data``` and ```student_data```  
-2. Run the ```Plot_Extent_of_overlap.py```, ```Plot_radar_chart.py```, ```Plot_ucsd_ece.py``` etc. to get the graphs.
-3. Open Analysis.ipynb and run each function for corresponding plots.
+1. Download data from webside in order to import data. Note that our data is too large to upload to github. So please download it and put the data into the Data folder.
+2. Import Plot1 as * shown in the Analysis.ipynb. It will automatically import data and get ready to plot.
+3. Run each function for corresponding plots.
 
