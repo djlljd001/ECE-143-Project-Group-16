@@ -21,7 +21,7 @@ We analyse the data and observe interesting correlation between various student,
 1. At the student level, we consider student gender and choice of science course as indicators of science self-efficacy
 2. At the school level, we consider the school ownership, region of US and type of locality to analyse the science self-efficacy
 3. At the teacher level, we consider the affirmative attitude, teacher's gender and teacher's certification and study their impact on the science self-efficacy. 
-
+4. At the parent level, we consider the household income, parents' job status, degree earned, native english speaker family , confidence on college tuition and their impact on the science self-efficacy.
 
 ## Applications
 This work is extremely valuable in analysing the variables/factors that impact the science self-efficacy of students in the United States. Our strategies could be used by students while making decisions about their career as well as by teachers, parents and schools alike in order to determine what drives students towards certain disciplines and tailor their curriculum, pedagogy to utilise this to the fullest. Our work is also extremely scalable, to other class levels, other disciplines and even other countries, with extremely minimal tuning for those cases.  
