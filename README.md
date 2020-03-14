@@ -1,29 +1,29 @@
-# ECE143Team16
-Analysis of Ninth Grader’s Science Self Efficacy (Team 16)
-
-
-# Engineering Course Analysis (Group 16)
+# Analysis of Ninth Grader’s Science Self Efficacy (ECE143 - Team 16)
 
 ## Team Members
--
+- Shreyas Rajesh
+- Subrato Chakravorty
 - Kalvin Goode
 - Jinglong Du (A12620446)
 
 ## Problem
-Analysing students' self efficiency in STEM course during high school years.
-
-## Summary
-
-## Methodology
-
+Analysing students' self-efficacy(interest in taking up STEM subjects as their career) in STEM course during high school years.
+In our case, to limit the extent of our study, we focus only on 9th Graders and Science self-efficacy.
 
 ## Dataset
 
+## Summary
+We analyse the data and observe interesting correlation between various student, school and teacher level variables with science self-efficacy. Each of the variables were chosen from a large list of variables available in the dataset based on interesting results and variables with significant correlation.
+
+1. At the student level, we consider student gender and choice of science course as indicators of science self-efficacy
+2. At the school level, we consider the school ownership, region of US and type of locality to analyse the science self-efficacy
+3. At the teacher level, we consider the affirmative attitude, teacher's gender and teacher's certification and study their impact on the science self-efficacy. 
+
 
 ## Applications
+This work is extremely valuable in analysing the variables/factors that impact the science self-efficacy of students in the United States. Our strategies could be used by students while making decisions about their career as well as by teachers, parents and schools alike in order to determine what drives students towards certain disciplines and tailor their curriculum, pedagogy to utilise this to the fullest. Our work is also extremely scalable, to other class levels, other disciplines and even other countries, with extremely minimal tuning for those cases.  
 
 ## File Structure
-
 ```
 Root
 |
