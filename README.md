@@ -1,18 +1,21 @@
 # Analysis of Ninth Grader’s Science Self Efficacy (ECE143 - Team 16)
 
 ## Team Members
-- Shreyas Rajesh(A53324553)
-- Subrato Chakravorty
+- Shreyas Rajesh (A53324553)
+- Subrato Chakravorty (A53322325)
 - Kalvin Goode (A12620672)
 - Jinglong Du (A12620446)
 
 ## Problem
-Analysing students' self-efficacy(interest in taking up STEM subjects as their career) in STEM course during high school years.
+Analysing students' self-efficacy (interest in taking up STEM subjects as their career) in STEM course during high school years.
 In our case, to limit the extent of our study, we focus only on 9th Graders and Science self-efficacy.
 
 ## Dataset
 
-We are using 2009 high school student and school data from the following website:
+This study employs public-use data from the High School Longitudinal Study of 2009 (HSLS:09). One important difference
+between HSLS:09 and previous studies is its focus on STEM education; one specific goal of the study is to gain an understanding of the factors that lead students to choose science, technology, engineering, and mathematics courses, majors, and careers. 
+
+Dataset can be found at: https://nces.ed.gov/EDAT/Data/Zip/HSLS_2016_v1_0_CSV_Datasets.zip
 
 
 ## Summary
@@ -24,7 +27,7 @@ We analyse the data and observe interesting correlation between various student,
 4. At the parent level, we consider the household income, parents' job status, degree earned, native english speaker family , confidence on college tuition and their impact on the science self-efficacy.
 
 ## Applications
-This work is extremely valuable in analysing the variables/factors that impact the science self-efficacy of students in the United States. Our strategies could be used by students while making decisions about their career as well as by teachers, parents and schools alike in order to determine what drives students towards certain disciplines and tailor their curriculum, pedagogy to utilise this to the fullest. Our work is also extremely scalable, to other class levels, other disciplines and even other countries, with extremely minimal tuning for those cases.  
+This work can prove to be valuable in analysing the variables/factors that impact the science self-efficacy of students in the United States. Our strategies could be used by students while making decisions about their career as well as by teachers, parents and schools alike in order to determine what drives students towards certain disciplines and tailor their curriculum, pedagogy to utilise this to the fullest. Our work is also easily scalable, to other class levels, other disciplines and even other countries, with minimal tuning for those cases.  
 
 ## File Structure
 ```
