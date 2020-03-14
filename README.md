@@ -12,6 +12,9 @@ In our case, to limit the extent of our study, we focus only on 9th Graders and 
 
 ## Dataset
 
+We are using 2009 high school student and school data from the following website:
+
+
 ## Summary
 We analyse the data and observe interesting correlation between various student, school and teacher level variables with science self-efficacy. Each of the variables were chosen from a large list of variables available in the dataset based on interesting results and variables with significant correlation.
 
@@ -34,11 +37,12 @@ Root
 +----processed_data
 |
 +----scripts
-|       |   create_processed_data.py
-|       |   word_freq.py
+|       |   plot1.py
+|       |   cleanData.py
 |
+|    
 |    main.py
-|    analyse_data.py
+|    Analysis.ipynb
 
 ```
 
@@ -52,5 +56,7 @@ Root
 2. matplotlib
 
 ### Run the code
+
 1. Run the ```main.py``` to generate all the data from raw txt files in ```school_data``` and ```student_data```  
 2. Run the ```Plot_Extent_of_overlap.py```, ```Plot_radar_chart.py```, ```Plot_ucsd_ece.py``` etc. to get the graphs.
+3. Open Analysis.ipynb and run each function for corresponding plots.
