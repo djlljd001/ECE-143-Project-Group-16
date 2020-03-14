@@ -1,11 +1,8 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-from src.preprocess import *
+import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
-
-# Load the data into the school and student variables respectively.
-sc, st = clean()
 
 def affirmative_attitude(st):
     '''
@@ -108,7 +105,6 @@ def affatt_boxplots(st):
     f, axes = plt.subplots(1, 2, figsize=(20, 10), sharex=True)
     # sns.set_style("ticks", {"xtick.major.size": 8, "ytick.major.size": 8})
     sns.set_palette(sns.color_palette(colors))
-    g = sns.FacetGrid(df, col="X1SEX")
     ax = sns.boxplot(x="AFFATT", y="X1SCIEFF", data=df_m, ax=axes[0])
     ax = sns.boxplot(x="AFFATT", y="X1SCIEFF", data=df_f, ax=axes[1])
 
@@ -142,6 +138,7 @@ def gender_certification(st):
 
 if __name__ == "__main__":
 
+    from src.preprocess import *
     # Load the data into the school and student variables respectively.
     parser = argparse.ArgumentParser()
     parser.add_argument('school_file', type=str, default='data/hsls_school_v1_0.csv',

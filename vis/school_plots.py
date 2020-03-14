@@ -1,7 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy import stats
-from src.preprocess import *
+import numpy as np
 import pandas as pd
 
 def if_public(st):
@@ -22,6 +22,7 @@ def if_public(st):
             Provide percentage value and total value for each item.
             Return formatted value for pie chart to use
         '''
+        import numpy as np
         isinstance(allvals,list)
         for i in allvals:
             pass
@@ -30,7 +31,7 @@ def if_public(st):
 
     plt.pie([public,private],labels=['Public','Non-Public'],autopct=lambda pct: func(pct, [public,private]),
             colors=['#2ECC71','#85C1E9'],startangle=90,textprops={'fontsize': 25})
-    plt.savefig(r"public_private.jpg")
+    plt.savefig(r"../images/public_private.png")
     plt.show()
 
     cat1 = df1[df1['X1CONTROL']==1.0].X1SCIEFF #-sci_mean
@@ -43,7 +44,7 @@ def if_public(st):
     plt.ylabel('Science Self-Efficacy',fontsize='xx-large')
     plt.xticks([0,1],('Public','Non-public'),fontsize='xx-large')
 
-    plt.savefig(r"public_private_eff.jpg")
+    plt.savefig(r"../images/public_private_eff.png")
 
     plt.show()
 
@@ -53,7 +54,7 @@ def school_region(sc):
     various regions of the United States.
     :param sc: School variables dataframe object.
     '''
-    assert isinstance(st, pd.DataFrame)
+    assert isinstance(sc, pd.DataFrame)
 
     # print(set(list(sc_x1['X1REGION']))) #Northeast, Midwest, South, West
     r_pu=[] #public
@@ -82,7 +83,7 @@ def school_region(sc):
     plt.xticks(bar1,('Northeast','Midwest','South','West'),fontsize='xx-large')
     plt.yticks(np.arange(0,401,50),fontsize='xx-large')
     plt.legend((p2[0],p1[0]),('Private','Public'),fontsize='xx-large')
-    plt.savefig(r"School_Type.png")
+    plt.savefig(r"../images/School_Type.png")
     plt.text(5,5,'Total=944')
     plt.show()
 
@@ -101,7 +102,7 @@ def school_region(sc):
     plt.xticks([x + barwidth*1.5 for x in bar1],('Northeast','Midwest','South','West'),fontsize='xx-large')
     plt.yticks(np.arange(0,250,50),fontsize='xx-large')
     plt.legend((r1[0],r2[0],r3[0],r4[0]),('City','Suburban','Town','Rural'),fontsize='xx-large')
-    plt.savefig("School_Region.png")
+    plt.savefig("../images/School_Region.png")
     plt.show()
 
     plt.bar([x for x in range(1,5)],[sum(r_c),sum(r_s),sum(r_t),sum(r_r)],width=barwidth+0.5,
@@ -113,6 +114,8 @@ def school_region(sc):
 if __name__ == "__main__":
 
     # Load the data into the school and student variables respectively.
+    from src.preprocess import *
+
     parser = argparse.ArgumentParser()
     parser.add_argument('school_file', type=str, default='data/hsls_school_v1_0.csv',
                         help='Path to file containing the school data')

@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from src.preprocess import *
+import numpy as np
 import pandas as pd
 
 def parent_impact(st):
@@ -66,6 +66,7 @@ def parent_deg(st):
     r2 = plt.bar([x + barwidth for x in bar1], inp2, color='#fcdb03', width=barwidth)
     plt.legend((r1[0], r2[0]), ("Parent 1", "Parent 2"), fontsize='xx-large')
     plt.ylabel("Average Science Efficacy Impact", fontsize='xx-large')
+    plt.show()
 
 
 def parent_factor(st):
@@ -109,6 +110,7 @@ def parent_factor(st):
     plt.legend((r1[0], r2[0]), ("No", "Yes"), fontsize='xx-large')
     plt.xlabel("Impact factors", fontsize='xx-large')
     plt.ylabel("Average Science Efficacy Impact", fontsize='xx-large')
+    plt.show()
 
 
 def parent_income(st):
@@ -130,10 +132,13 @@ def parent_income(st):
     r1 = plt.bar(range(13), inp, color="green", width=barwidth,
                  tick_label=[15, 35, 55, 75, 95, 115, 135, 155, 175, 195, 215, 235, "Unlimited"])
     plt.ylabel("Average Science Efficacy Impact", fontsize='xx-large')
+    plt.show()
 
 if __name__ == "__main__":
 
     # Load the data into the school and student variables respectively.
+    from src.preprocess import *
+
     parser = argparse.ArgumentParser()
     parser.add_argument('school_file', type=str, default='data/hsls_school_v1_0.csv',
                         help='Path to file containing the school data')
