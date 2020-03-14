@@ -137,12 +137,14 @@ def parent_income(st):
 if __name__ == "__main__":
 
     # Load the data into the school and student variables respectively.
-    from src.preprocess import *
+    import sys
+    sys.path.append('../src/')
+    from preprocess import *
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('school_file', type=str, default='data/hsls_school_v1_0.csv',
+    parser.add_argument('--school_file', type=str, required=False, default='../data/hsls_school_v1_0.csv',
                         help='Path to file containing the school data')
-    parser.add_argument('student_file', type=str, default='data/hsls_school_v1_0.csv',
+    parser.add_argument('--student_file', type=str, required=False, default='../data/hsls_school_v1_0.csv',
                         help='Path to file containing the student data')
     args = parser.parse_args()
 
