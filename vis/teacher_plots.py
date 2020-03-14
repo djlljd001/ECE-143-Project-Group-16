@@ -4,6 +4,79 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
+def teacher_gender(st):
+    '''
+    This method plots a pie chart of the number of 
+    male and female teachers as well as the influence
+    of gender on the science self-efficcay
+    :param st: Student variables dataframe object
+    '''
+
+    indices = st[st.X1SCIEFF == -2.91].index
+    df1 = st.drop(indices)
+    public = sum(df1['N1SEX'] == 1)
+    private = sum(df1['N1SEX'] == 2)
+
+    def func(pct, allvals):
+        '''
+            Provide percentage value and total value for each item.
+            Return formatted value for pie chart to use
+        '''
+        isinstance(allvals, list)
+        for i in allvals:
+            # isinstance(i>0)
+            pass
+        absolute = int(pct / 100. * np.sum(allvals))
+        return "{:.2f}%\n({:d})".format(pct, absolute)
+
+    plt.pie([public, private], labels=['Male Teachers', 'Female Teachers'],
+            autopct=lambda pct: func(pct, [public, private]),
+            colors=['#85C1E9', '#DC7633'], startangle=180, textprops={'fontsize': 25})
+    plt.savefig(r"male_female_teach.jpg")
+    plt.show()
+
+    cat1 = df1[df1['N1SEX'] == 1].X1SCIEFF  # -sci_mean
+    cat2 = df1[df1['N1SEX'] == 2].X1SCIEFF  # -sci_mean
+
+    stats.ttest_ind(cat1, cat2, equal_var=False)
+    colors = ['#85C1E9', '#DC7633']
+    sns.set_palette(sns.color_palette(colors))
+    ax = sns.boxplot(x="N1SEX", y="X1SCIEFF", data=df1)
+    plt.ylabel('Student\'s Science Self-Efficacy', fontsize='xx-large')
+    plt.xticks([0, 1], ('Male Teacher', 'Female Teacher'), fontsize='xx-large')
+    plt.savefig(r"../images/male_female_teacheff.jpg")
+    plt.show()
+
+
+def teacher_certification(st):
+    '''
+    This method plots the impact of teacher_certification on the
+    student's science self-efficacy.
+    :param st: Student variables dataframe object.
+    '''
+
+    assert isinstance(st, pd.DataFrame)
+    # Create AFFATT variable for analysus becuase of high correlation.
+    indices = st[st.X1SCIEFF == -2.91].index
+    df1 = st.drop(indices)
+    #df1 = st[['X1SEX','N1SEX','X1TSCERT','X1SCIEFF','N1GROUP','S1STCHVALUES',
+    #         'S1STCHRESPCT','S1STCHFAIR','S1STCHCONF','S1STCHMISTKE','S1STCHTREAT','S1STCHMFDIFF']]
+
+    cat1 = df1[df1['X1TSCERT']==0].X1SCIEFF #-sci_mean
+    cat2 = df1[df1['X1TSCERT']==1].X1SCIEFF #-sci_mean
+
+    # indices = df1[df1.X1TSCERT.is[0,1]].index
+    df2 = df1[df1.X1TSCERT.isin([0,1])]
+    stats.ttest_ind(cat1, cat2,equal_var=False)
+    colors=['#85C1E9','#2ECC71']
+    sns.set_palette(sns.color_palette(colors))
+    ax = sns.boxplot(x="X1TSCERT", y="X1SCIEFF", data=df2)
+    plt.ylabel('Student\'s Science Self-Efficacy',fontsize='xx-large')
+    plt.xticks([0,1],('No Regular Certification','Regular Certification'),fontsize='xx-large')
+    plt.savefig(r"../images/teach_cert.jpg")
+    # plt.ylim([-2.1,1.9])
+    plt.show()
+
 def affirmative_attitude(st):
     '''
     This method plots the variation of the affirmative attitude with the
