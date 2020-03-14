@@ -3,7 +3,7 @@
 ## Team Members
 - Shreyas Rajesh(A53324553)
 - Subrato Chakravorty
-- Kalvin Goode
+- Kalvin Goode (A12620672)
 - Jinglong Du (A12620446)
 
 ## Problem
