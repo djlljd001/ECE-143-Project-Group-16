@@ -1,7 +1,7 @@
 # Analysis of Ninth Grader’s Science Self Efficacy (ECE143 - Team 16)
 
 ## Team Members
-- Shreyas Rajesh
+- Shreyas Rajesh(A53324553)
 - Subrato Chakravorty
 - Kalvin Goode
 - Jinglong Du (A12620446)
