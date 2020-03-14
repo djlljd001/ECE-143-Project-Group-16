@@ -1,7 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy import stats
-from src.preprocess import *
+import numpy as np
 import pandas as pd
 
 def gender_plot(st):
@@ -20,6 +20,7 @@ def gender_plot(st):
             Provide percentage value and total value for each item.
             Return formatted value for pie chart to use
         '''
+        import numpy as np
         isinstance(allvals,list)
         for i in allvals:
             #isinstance(i>0) 
@@ -27,9 +28,10 @@ def gender_plot(st):
         absolute = int(pct/100.*np.sum(allvals))
         return "{:.2f}%\n({:d})".format(pct, absolute)
 
+    plt.rcParams["figure.figsize"] = (10, 10)
     plt.pie([male,female],labels=['Male','Female'],autopct=lambda pct: func(pct, [male,female]),
             colors=['#85C1E9','#DC7633'],startangle=90,textprops={'fontsize': 25})
-    plt.savefig(r"Male_Female.jpg")
+    plt.savefig(r"../images/Male_Female.png")
     plt.show()
 
 def gender_efficacy_impact(st):
@@ -53,6 +55,7 @@ def gender_efficacy_impact(st):
     cat1 = df[df['X1SEX']==1.0].X1SCIEFF #-sci_mean
     cat2 = df[df['X1SEX']==2.0].X1SCIEFF #-sci_mean
 
+    plt.rcParams["figure.figsize"] = (10, 10)
     stats.ttest_ind(cat1, cat2,equal_var=False)
     colors=["#85C1E9","#DC7633"]
     sns.set_palette(sns.color_palette(colors))
@@ -179,11 +182,12 @@ def efficacy_correlation(st):
 
 if __name__ == "__main__":
 
+    from src.preprocess import *
     # Load the data into the school and student variables respectively.
     parser = argparse.ArgumentParser()
-    parser.add_argument('school_file', type=str, default='data/hsls_school_v1_0.csv',
+    parser.add_argument('school_file', type=str, default='../data/hsls_school_v1_0.csv',
                         help='Path to file containing the school data')
-    parser.add_argument('student_file', type=str, default='data/hsls_school_v1_0.csv',
+    parser.add_argument('student_file', type=str, default='../data/hsls_school_v1_0.csv',
                         help='Path to file containing the student data')
     args = parser.parse_args()
 
