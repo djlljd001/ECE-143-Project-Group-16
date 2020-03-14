@@ -35,9 +35,9 @@ def clean(school_path='../data/hsls_school_v1_0.csv', student_path='../data/hsls
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('school_file', type=str, default='../data/hsls_school_v1_0.csv',
+    parser.add_argument('--school_file', type=str, default='../data/hsls_school_v1_0.csv',
                         help='Path to file containing the school data')
-    parser.add_argument('student_file', type=str, default='../data/hsls_school_v1_0.csv',
+    parser.add_argument('--student_file', type=str, default='../data/hsls_school_v1_0.csv',
                         help='Path to file containing the student data')
     args = parser.parse_args()
 
