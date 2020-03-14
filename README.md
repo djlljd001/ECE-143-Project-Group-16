@@ -30,34 +30,55 @@ This work is extremely valuable in analysing the variables/factors that impact t
 ```
 Root
 |
-+----raw_data
++----data
+|      |  hsls_school_v1_0.csv
+|      |  hsls_student_v1_0.csv
 |
-+----
 |
-+----processed_data
++----images
 |
-+----scripts
-|       |   plot1.py
-|       |   cleanData.py
++----src
+|     |   preprocess.py
+|     |   Analysis.ipynb
 |
-|    
-|    main.py
-|    Analysis.ipynb
++----vis
+|     |   student_plots.py
+|     |   school_plots.py
+|     |   teacher_plots.py
+|     |   parent_plots.py
+|
++---- README.md
 
 ```
 
 ## Instructions on running the code
 
-* Python version: Python 3.6.6 64-bit
+* Python version: Python 3.7.1 64-bit
 ### Required packages
 
 1. numpy
 1. pandas
 2. matplotlib
+3. seaborn
+4. scikit-learn
 
 ### Run the code
 
-1. Download data from webside in order to import data. Note that our data is too large to upload to github. So please download it and put the data into the Data folder.
-2. Import Plot1 as * shown in the Analysis.ipynb. It will automatically import data and get ready to plot.
-3. Run each function for corresponding plots.
+1. Download data from webside in order to import data as explained in the dataset subsection. Note that our data is too large to upload to github. So please download it and put the data into the folder as described above.
+2. To obtain full analysis follow steps as shown in Analysis.ipynb. It will automatically import data and generate all the plots for all our various experiments.
+3. Alternately, each plot file in the visualization folder as well as the preprocess file can be run independtly.
+4. To do so, we need to use the following commands from the terminal in the root folder. As an example,
+```
+cd vis
+python student_plots.py --school_file=../data/hsls_school_v1_0.csv --student_file=../data/hsls_student_v1_0.csv
+```
+More generally, 
+```
+cd <path_to_folder_of_py_file>
+python <path_to_py_file> --school_file=<path_to_school_data_file> --student_file=<path_to_student_data_file>
+```
+5. To understand the argument parameters better, one can run,
+```
+python <path_to_py_file> --help
+```
 
