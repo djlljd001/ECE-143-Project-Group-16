@@ -74,9 +74,9 @@ Root
 
 ### Run the code
 
-1. Download data from webside in order to import data as explained in the dataset subsection. Note that our data is too large to upload to github. So please download it and put the data into the folder as described above.
-2. To obtain full analysis follow steps as shown in Analysis.ipynb. It will automatically import data and generate all the plots for all our various experiments.
-3. Alternately, each plot file in the visualization folder as well as the preprocess file can be run independtly.
+1. Download data from website and follow steps as explained in the dataset subsection. Note that our data is too large to upload to github.
+2. To obtain full analysis run Analysis.ipynb. It will automatically import data and generate all the plots for all our various experiments.
+3. Alternatively, each plot file in the visualization folder as well as the preprocess file can be run independently.
 4. To do so, we need to use the following commands from the terminal in the root folder. As an example,
 ```
 cd vis
