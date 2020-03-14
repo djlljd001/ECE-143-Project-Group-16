@@ -17,6 +17,13 @@ between HSLS:09 and previous studies is its focus on STEM education; one specifi
 
 Dataset can be downloaded by clicking: https://nces.ed.gov/EDAT/Data/Zip/HSLS_2016_v1_0_CSV_Datasets.zip
 
+Steps:
+1. unzip Data/Zip/HSLS_2016_v1_0_CSV_Datasets.zip
+2. Change the name of the file 'hsls_09_school_v1_0.csv' to 'hsls_school_v1_0.csv'
+3. Change the name of the file 'hsls_16_student_v1_0.csv' to 'hsls_student_v1_0.csv'
+4. Move both the files to Data folder inside the project.
+
+
 
 ## Summary
 We analyse the data and observe interesting correlation between various student, school and teacher level variables with science self-efficacy. Each of the variables were chosen from a large list of variables available in the dataset based on interesting results and variables with significant correlation.
