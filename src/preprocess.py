@@ -11,6 +11,10 @@ def clean(school_path='data/hsls_school_v1_0.csv', student_path='data/hsls_stude
 	Dataframe object containing student variables.
 	'''
 
+    assert isinstance(school_path, str) and isinstance(student_path, str), "path variables must be of type str"
+
+
+
     print("Read data...")
     sc = pd.read_csv(school_path)
     st = pd.read_csv(student_path)
@@ -31,6 +35,7 @@ def clean(school_path='data/hsls_school_v1_0.csv', student_path='data/hsls_stude
     print('Finish Cleaning')
 
     return [sc, st]
+
 
 if __name__ == "__main__":
 
