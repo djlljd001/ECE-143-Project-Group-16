@@ -226,6 +226,8 @@ if __name__ == "__main__":
     sc, st = clean(args.school_file, args.student_file)
 
     # Comment based on desired plots. Leave as is for all plots.
+    teacher_gender(st)
+    teacher_certification(st)
     linear_regression_affatt(st)
     affatt_boxplots(st)
     affirmative_attitude(st)
