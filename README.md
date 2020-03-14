@@ -15,7 +15,7 @@ In our case, to limit the extent of our study, we focus only on 9th Graders and 
 This study employs public-use data from the High School Longitudinal Study of 2009 (HSLS:09). One important difference
 between HSLS:09 and previous studies is its focus on STEM education; one specific goal of the study is to gain an understanding of the factors that lead students to choose science, technology, engineering, and mathematics courses, majors, and careers. 
 
-Dataset can be found at: https://nces.ed.gov/EDAT/Data/Zip/HSLS_2016_v1_0_CSV_Datasets.zip
+Dataset can be downloaded by clicking: https://nces.ed.gov/EDAT/Data/Zip/HSLS_2016_v1_0_CSV_Datasets.zip
 
 
 ## Summary
@@ -56,7 +56,7 @@ Root
 
 ## Instructions on running the code
 
-* Python version: Python 3.7.1 64-bit
+* Python version: Python 3.7.3 64-bit
 ### Required packages
 
 1. numpy
